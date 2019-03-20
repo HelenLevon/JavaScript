@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <title>Форма входа</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.23.0/moment.min.js"></script>
+</head>
+
+<body>
+  <div id="menu" style="display: none">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+      <h5 class="my-0 mr-md-auto font-weight-normal">User Page</h5>
+      <div class="btn-group my-2 my-md-0 mr-md-3">
+        <button id="go_gallery" class="btn btn-outline-primary">Gallery</button>
+        <button id="go_about_user" class="btn btn-outline-primary">About user</button>
+        <button id="go_exit" class="btn btn-outline-primary">Exit</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div id="alert" class="alert alert-danger" style="visibility:hidden" role="alert">
+    This is a danger alert—check it out!
+  </div>
+  <form class="form-signin" id="form">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="text" value="levon@levon.levon" id="inputEmail" class="form-control" placeholder="Email address"
+      required="" autofocus="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+      autocomplete="off">
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input value="levon5" type="text" id="inputPassword" class="form-control" placeholder="Password" required="" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;"
+      autocomplete="off">
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+  </form>
+  <div id="info-user" class="container" style="width: 600px; display: none; margin-top: 50px; ">
+    <form>
+      <div class="row">
+        <div class="form-group" style="width: 50%; padding-right: 5px;">
+          <label for="emailAddress">Email address:</label>
+          <input type="email" class="form-control" id="emailAddress">
+        </div>
+        <div class="form-group" style="width: 50%; padding-left: 5px">
+          <label for="passwordField">Password:</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button id="btnShowPassword" class="btn btn-secondary" type="button"></button>
+            </div>
+            <input type="text" class="form-control" id="passwordField">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="site-wrapper" style="display: none" id="galleryContainer">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-12 col-md-12">
+          <h3>Gallery by Helen Levon</h3>
+        </div>
+      </div>
+      <div class="modal myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your message :</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>No more photo in the gallery!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 text-center">
+        <p class="count-text">Images: <span id="count">0</span></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 justify-content-center offset-md-4">
+        <select id="line-selector" class="custom-select">
+          <option value="0">choose</option>
+          <option value="1">a-z</option>
+          <option value="2">z-a</option>
+          <option value="3"> new items in the beggining</option>
+          <option value="4"> old items in the beggining</option>
+        </select>
+        <br><br>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="row justify-content-center" id="gallary">
+      </div>
+      <div class="row justify-content-center">
+        <button type="button" id="add-item-btn" class="btn btn-primary my-2">Add new item</button>
+      </div>
+    </div>
+  </div>
+  </div>
+  <main class="text-center d-none" role="main" id="viewitem">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h3 class="jumbotron-heading" id="formtitle">Add new item</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <form class="form-newimg">
+              <label class="pt-2">URL</label>
+              <input type="text" class="form-control" id="newimgurl" placeholder="http://" required="" autofocus=""
+                autocomplete="off">
+              <label class="pt-2">Name</label>
+              <input type="text" class="form-control" id="newname" placeholder="" required="" autofocus="" autocomplete="off">
+              <label class="pt-2">Description</label>
+              <textarea class="form-control" id="newdescript" rows="3" name="newdescript" required="" autofocus=""
+                autocomplete="off"></textarea>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-lg btn-primary btn-block mt-5 mb-3 assignmentbtn" data-assignment="save-new">Save</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src=js/utils.js> </script> <script src=js/gallery.js> </script> <script src=js/validator.js> </script>
+  <script src=js/login.js> </script> <script src=js/main.js> </script> </body> </html>
